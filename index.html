@@ -1,180 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap" 
-rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/styles.css" />
 
-  <title>Black friday</title>
-</head>
-<body>
+    <title>Black friday</title>
+  </head>
+  <body>
+    <header>
+      <div class="banner">
+        <img class="banner-desktop" src="./assets/images/Banner.svg" />
+        <img class="banner-mobile" src="./assets/images/Banner-mobile.svg" />
+      </div>
+      <div class="lead-top">
+        <div class="lead">
+          <h6>
+            Cadastre seu email para receber promoções e cupons de<br />
+            desconto
+          </h6>
 
-  <header>
-    <div class="banner">
-      <img class="banner-desktop" src="./assets/images/Banner.svg"/>
-      <img  class="banner-mobile" src="./assets/images/Banner-mobile.svg"/>
-    </div>
-    <div class="lead-top">
-      <div class="lead">
-      <h6>
-        Cadastre seu email para receber promoções e cupons de<br> desconto
-      </h6>
-       
-       <form class="form" id="form">
-          <input type="text" class="form-control mr-sm-2" id="name" 
-          placeholder="Digite seu nome" required>
-          <input type="email" class="form-control mr-sm-2" id="email"
-           placeholder="Digite seu email" required>
+          <form class="form" id="form">
+            <input
+              type="text"
+              class="form-control mr-sm-2"
+              id="name"
+              placeholder="Digite seu nome"
+              required
+            />
+            <input
+              type="email"
+              class="form-control mr-sm-2"
+              id="email"
+              placeholder="Digite seu email"
+              required
+            />
 
-          <button type="submit" class="btn primary" onClick="enviarLead()">
-            Cadastrar
-          </button>
-         
-        </form> 
-      </div>
-    </div>
-  </header>
-  <main>
-   <section class="bg-gray">
-    <div class="row categories">
-      <div class="col discounts">
-        <div class="description">
-        <h2>Sapatos</h2>
-        <p>De 30% a 60% <br>de desconto</p>
-        <button type="button" class="btn primary" data-toggle="modal" 
-        data-target="#modal-products">Comprar</button>
-      </div>
-      </div>
-      <div class="col-12 col-md-5">
-        <img src="./assets/images/Sapatos.svg"/>
-      </div>
-    </div>    
-   </section>
-   <section class="bg-white">
-    <div class="row categories">  
-      <div class="col-12 col-md-7 order-2 order-sm-1">
-        <img src="./assets/images/roupas2.png"/>
-      </div>
-      <div class="col discounts order-1 order-sm-2">
-        <div class="description">
-        <h2>Roupas</h2>
-        <p>De 15% a 75% <br>de desconto</p>
-        <button type="button" class="btn primary" data-toggle="modal" 
-        data-target="#modal-products">Comprar</button>
-      </div>
-    </div>
-    </div>    
-   </section>
-   <section class="bg-gray">
-    <div class="row categories">
-      <div class="col discounts">
-        <div class="description">
-        <h2>Bolsas</h2>
-        <p>De 20% a 80% <br>de desconto</p>
-        <button type="button" class="btn primary" data-toggle="modal" 
-        data-target="#modal-products">Comprar</button>
-      </div>
-      </div>
-      <div class="col-12 col-md-5">
-        <img src="./assets/images/bolsas.svg"/>
-      </div>
-    </div>    
-   </section>
-   <section class="bg-white">
-    <div class="row categories py-5">  
-      <div class="col-12 col-md-5 order-2 order-sm-1">
-        <img src="./assets/images/chapeus.svg"/>
-      </div>
-      <div class="col discounts order-1 order-sm-2">
-        <div class="description">
-        <h2>Acessórios</h2>
-        <p>De 40% a 70% <br>de desconto</p>
-        <button type="button" class="btn primary" data-toggle="modal" 
-        data-target="#modal-products">Comprar</button>
-      </div>
-    </div>
-    </div>    
-   </section>
-   <section>
-    <div class="lead-bottom">
-      <div class="lead">
-      <h6>
-        Cadastra-se para ficar por dentro das melhores ofertas!
-      </h6>
-       
-       <form class="form" id="form-lead-bottom">
-          <input type="text" class="form-control mr-sm-2" id="name-lead-bottom" placeholder="Digite seu nome" required>
-          <input type="email" class="form-control mr-sm-2" id="email-lead-bottom" placeholder="Digite seu email" required>
-
-          <button type="submit" class="btn primary" onClick="enviarLeadBottom()">Cadastrar</button>
-        </form> 
-      </div>
-    </div>
-   </section>
-
-  </main>
- 
-  <footer>
-    <p>&copy; Todos os direitos reservados</p>
-    <p class="pt-1"><strong><a href="https://lygia.me" target="_blank">Desenvolvido por Lygia Botelho - 2021</a></strong></p>
-  </footer>
-
-
-  <!-- Modal Success-->
-<div class="modal fade md-success" id="modal-lead-success" tabindex="-1" role="dialog" aria-labelledby="modalSuccess" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">
-          Parabéns!!!
-         </h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">   
-        
-        <p>  Seu cadastro foi realizado com sucesso!</p>
-        <p class="small">Em breve você receberá nosso email!    </p>
-      </div>
-     
-    </div>
-  </div>
-</div>
-
-
-  <!-- Modal Products-->
-  <div class="modal fade md-products" id="modal-products" tabindex="-1" role="dialog" aria-labelledby="modalBlackFriday" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            Não perca a oportunidade
-           </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+            <button type="submit" class="btn primary" onClick="enviarLead()">
+              Cadastrar
+            </button>
+          </form>
         </div>
-        <div class="modal-body">     
-          <p>Estamos preparando as melhores ofertas para você!</p>
+      </div>
+    </header>
+    <main>
+      <section class="bg-gray">
+        <div class="row categories">
+          <div class="col discounts">
+            <div class="description">
+              <h2>Sapatos</h2>
+              <p>De 30% a 60% <br />de desconto</p>
+              <button
+                type="button"
+                class="btn primary"
+                data-toggle="modal"
+                data-target="#modal-products"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <img src="./assets/images/Sapatos.svg" />
+          </div>
         </div>
-       
+      </section>
+      <section class="bg-white">
+        <div class="row categories">
+          <div class="col-12 col-md-7 order-2 order-sm-1">
+            <img src="./assets/images/roupas2.png" />
+          </div>
+          <div class="col discounts order-1 order-sm-2">
+            <div class="description">
+              <h2>Roupas</h2>
+              <p>De 15% a 75% <br />de desconto</p>
+              <button
+                type="button"
+                class="btn primary"
+                data-toggle="modal"
+                data-target="#modal-products"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-gray">
+        <div class="row categories">
+          <div class="col discounts">
+            <div class="description">
+              <h2>Bolsas</h2>
+              <p>De 20% a 80% <br />de desconto</p>
+              <button
+                type="button"
+                class="btn primary"
+                data-toggle="modal"
+                data-target="#modal-products"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+          <div class="col-12 col-md-5">
+            <img src="./assets/images/bolsas.svg" />
+          </div>
+        </div>
+      </section>
+      <section class="bg-white">
+        <div class="row categories py-5">
+          <div class="col-12 col-md-5 order-2 order-sm-1">
+            <img src="./assets/images/chapeus.svg" />
+          </div>
+          <div class="col discounts order-1 order-sm-2">
+            <div class="description">
+              <h2>Acessórios</h2>
+              <p>De 40% a 70% <br />de desconto</p>
+              <button
+                type="button"
+                class="btn primary"
+                data-toggle="modal"
+                data-target="#modal-products"
+              >
+                Comprar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="lead-bottom">
+          <div class="lead">
+            <h6>Cadastra-se para ficar por dentro das melhores ofertas!</h6>
+
+            <form class="form" id="form-lead-bottom">
+              <input
+                type="text"
+                class="form-control mr-sm-2"
+                id="name-lead-bottom"
+                placeholder="Digite seu nome"
+                required
+              />
+              <input
+                type="email"
+                class="form-control mr-sm-2"
+                id="email-lead-bottom"
+                placeholder="Digite seu email"
+                required
+              />
+
+              <button
+                type="submit"
+                class="btn primary"
+                onClick="enviarLeadBottom()"
+              >
+                Cadastrar
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; Todos os direitos reservados</p>
+      <p class="pt-1">
+        <strong
+          ><a href="https://lygia.me" target="_blank"
+            >Desenvolvido por Lygia Botelho - 2021</a
+          ></strong
+        >
+      </p>
+    </footer>
+
+    <!-- Modal Success-->
+    <div
+      class="modal fade md-success"
+      id="modal-lead-success"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalSuccess"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Parabéns!!!</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Seu cadastro foi realizado com sucesso!</p>
+            <p class="small">Em breve você receberá nosso email!</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Modal Products-->
+    <div
+      class="modal fade md-products"
+      id="modal-products"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modalBlackFriday"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Não perca a oportunidade</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Estamos preparando as melhores ofertas para você!</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <script src="js/script.js"></script>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>

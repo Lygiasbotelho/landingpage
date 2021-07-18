@@ -34,7 +34,7 @@ a {
   min-width: 117px;
 }
 .primary:hover,
-.primary:focus, 
+.primary:focus,
 .primary:active {
   background-color: #d4491a;
   box-shadow: 0 0 1em #c3c3c3;
@@ -45,10 +45,10 @@ a {
 .banner img {
   width: 100%;
 }
-.banner-desktop{
+.banner-desktop {
   display: block;
 }
-.banner-mobile{
+.banner-mobile {
   display: none;
 }
 
@@ -63,7 +63,7 @@ a {
   background: url(../images/mulher-apontando.jpg) no-repeat;
   background-position: left;
   background-size: contain;
-  background-color:  #FE9E0A;
+  background-color: #fe9e0a;
   padding: 30px 0;
   display: flex;
   justify-content: flex-end;
@@ -75,7 +75,6 @@ a {
 .lead-bottom .lead {
   width: 85%;
   margin-right: 5%;
-
 }
 .lead h6 {
   color: #333333;
@@ -130,21 +129,20 @@ img {
   margin: auto 7px auto 0;
 }
 footer {
-  background-color: #1A1919;
+  background-color: #1a1919;
   color: #fff;
   font-size: 0.7rem;
   padding: 15px 0;
   text-align: center;
- 
 }
-footer p{
+footer p {
   margin: 0;
 }
 footer a {
   color: #fee824;
 }
 footer a:hover {
-  color: #FE9E0A;
+  color: #fe9e0a;
 }
 .modal-content {
   height: 330px;
@@ -183,10 +181,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-  .banner-desktop{
+  .banner-desktop {
     display: none;
   }
-  .banner-mobile{
+  .banner-mobile {
     display: block;
   }
   .lead input {
@@ -205,13 +203,12 @@ footer a:hover {
     margin-bottom: 10px;
     margin-top: 10px;
   }
-  .lead-bottom .lead{
+  .lead-bottom .lead {
     margin-right: auto;
   }
   .lead-bottom h6 {
     width: 100%;
     font-size: 1.1rem;
-    
     margin-bottom: 10px;
     margin-top: 10px;
   }

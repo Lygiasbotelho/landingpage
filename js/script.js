@@ -1,40 +1,43 @@
-function enviarLead () {
+function enviarLead() {
 
-const form = document.getElementById('form');
-const formLeadBottom = document.getElementById('form-lead-bottom');
+  const form = document.getElementById('form');
+  const formLeadBottom = document.getElementById('form-lead-bottom');
 
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  let nome = document.getElementById('name').value;
-  let email = document.getElementById('email').value;
-  let data = {
-    nome,
-    email,
-  }
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let nome = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let data = {
+      nome,
+      email,
+    }
 
-  let convertData = JSON.stringify(data);
+    let convertData = JSON.stringify(data);
 
-  localStorage.setItem('lead', convertData);
-  $('#modal-lead-success').modal('show'); 
-  document.getElementById('form').reset();
+    localStorage.setItem('lead', convertData);
+    $('#modal-lead-success').modal('show');
+
+    setTimeout(() => {
+      document.getElementById('form').reset();
+    }, 1000)
 
 
-  //Caso queira exibir uma mensagem
-  // let content = document.getElementById('content');
-  // let carregando = `<p>carregando ...</p>`
-  // let pronto = `<p>pronto ...</p>`
+    //Caso queira exibir uma mensagem
+    // let content = document.getElementById('content');
+    // let carregando = `<p>carregando ...</p>`
+    // let pronto = `<p>pronto ...</p>`
 
-  // content.innerHTML = carregando;
-  // setTimeout(() => {
-  //   content.innerHTML = pronto
-  // }, 1000)
-})
+    // content.innerHTML = carregando;
+    // setTimeout(() => {
+    //   content.innerHTML = pronto
+    // }, 1000)
+  })
 }
 
-function enviarLeadBottom () {
+function enviarLeadBottom() {
 
   const formLeadBottom = document.getElementById('form-lead-bottom');
-  
+
   formLeadBottom.addEventListener('submit', (e) => {
     e.preventDefault();
     let nome = document.getElementById('name-lead-bottom').value;
@@ -43,12 +46,15 @@ function enviarLeadBottom () {
       nome,
       email,
     }
-  
+
     let convertData = JSON.stringify(data);
-  
+
     localStorage.setItem('lead', convertData);
-    $('#modal-lead-success').modal('show'); 
-    document.getElementById('form-lead-bottom').reset();
-  
+    $('#modal-lead-success').modal('show');
+
+    setTimeout(() => {
+      document.getElementById('form-lead-bottom').reset();
+    }, 1000)
+
   })
-  }
+}
